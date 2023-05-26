@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BENVENUTO NEL MIO SITO WEB!!</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .neon-text {
+      font-size: 80px;
+      text-transform: uppercase;
+      letter-spacing: 8px;
+      position: relative;
+      animation: flicker 1s infinite alternate;
+    }
+
+    .neon-text::before {
+      content: attr(data-text);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      color: #00ff33;
+      text-shadow: 0 0 20px #009dff, 0 0 20px #00bfff, 0 0 20px #00c8ff, 0 0 40px #00ff95, 0 0 80px #006d7d, 0 0 120px #3c00ff, 0 0 160px #3300ff;
+      z-index: -1;
+    }
+
+    @keyframes flicker {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.6;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="neon-text" data-text="BENVENUTO NEL MIO SITO WEB!!">BENVENUTO NEL MIO SITO WEB!!</div>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pulsanti con link</title>
+  <style>
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .button:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+<a href="https://www.twitch.tv/renzo_ita_" class="button">Twitch💜🎧📶</a>
+<a href="https://www.youtube.com/channel/UC0436nnnS1VhoY8H6Prw_7Q" class="button">YouTube❤️🎧📶</a>
